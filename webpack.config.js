@@ -22,6 +22,24 @@ module.exports={
        use:{
          loader:'babel-loader'
        }
+     },
+     {
+      test:/.*\.(gif|png|jpe?g|jpg)$/i,
+      use:[
+       { loader:'file-loader'}
+      ]
+     },
+     {
+       test:/\.css$/,
+       use:[
+        
+         {
+           loader:'style-loader',
+         },
+         {
+           loader:'css-loader'
+         }
+       ]
      }
    ]
  }
